@@ -11,82 +11,79 @@ tags: [学习]
 #  pod 'WDWorkKit',:git => 'https://github.com/BaroneX/WDWorkKit.git'
 #  pod 'AFNetworking'
 #  pod 'SDWebImage'
+#  pod 'Masonry'
 #  pod 'MBProgressHUD'
-#  pod 'TTTAttributedLabel'
 #  pod 'MJRefresh'
+#  pod 'TTTAttributedLabel'
 #  pod 'LKDBHelper'
 #  pod 'SVProgressHUD'
 #  pod 'MJExtension'
 #  pod 'IQKeyboardManager'
-#  pod 'Masonry'
 #  pod 'DateTools'
 ```
 
 ```
 WDWorkKit
-		├── Assets					#资源文件
-		│   ├── b27_icon_star_gray@2x.png
-		│   ├── b27_icon_star_yellow@2x.png
-		│   ├── radio_checked.png
-		│   └── radio_unchecked.png
-		└── Classes
-		    ├── WDFrameWork 		#常用
-		    │   ├── NSDate+WDCalendar.h
-		    │   ├── NSDate+WDCalendar.m
-		    │   ├── NSString+Addition.h
-		    │   ├── NSString+Addition.m
-		    │   ├── NSString+PJR.h
-		    │   ├── NSString+PJR.m
-		    │   ├── Reachability.h
-		    │   ├── Reachability.m
-		    │   ├── UIDevice+Addition.h
-		    │   ├── UIDevice+Addition.m
-		    │   ├── UIImage+Addition.h
-		    │   ├── UIImage+Addition.m
-		    │   ├── WDCoreAnimationEffect.h
-		    │   ├── WDCoreAnimationEffect.m
-		    │   ├── WDCountButton.h
-		    │   ├── WDCountButton.m
-		    │   ├── WDCycleScrollView.h
-		    │   ├── WDCycleScrollView.m
-		    │   ├── WDFrameWork.h
-		    │   ├── WDJsonKit.h
-		    │   ├── WDJsonKit.m
-		    │   ├── WDReachability.h
-		    │   ├── WDReachability.m
-		    │   ├── WDSandbox.h
-		    │   ├── WDSandbox.m
-		    │   ├── WDSystemInfo.h
-		    │   ├── WDSystemInfo.m
-		    │   ├── WDUIConfigDefine.h
-		    │   ├── WDViewExt.h
-		    │   ├── WDViewExt.m
-		    │   └── WDWorkKit.h
-		    ├── WDNetWork 		#网络
-		    │   ├── WDNetWork.h
-		    │   └── WDNetWork.m
-		    └── WDUI			 #UI部分
-		        ├── CWStarRateView
-		        │   ├── CWStarRateView.h
-		        │   └── CWStarRateView.m
-		        ├── DOPDropDownMenu.h
-		        ├── DOPDropDownMenu.m
-		        ├── JKAlertDialog
-		        │   ├── JKAlertDialog.h
-		        │   └── JKAlertDialog.m
-		        ├── MPNotificationView
-		        │   ├── MPNotificationView.h
-		        │   ├── MPNotificationView.m
-		        │   ├── OBGradientView.h
-		        │   └── OBGradientView.m
-		        ├── PopoverView.h
-		        ├── PopoverView.m
-		        ├── QRadioButton
-		        │   ├── QRadioButton.h
-		        │   └── QRadioButton.m
-		        ├── UIView+Toast.h
-		        └── UIView+Toast.m
-		
+├── Assets #资源文件
+│   ├── b27_icon_star_gray@2x.png
+│   ├── b27_icon_star_yellow@2x.png
+│   ├── radio_checked.png
+│   └── radio_unchecked.png
+└── Classes
+    ├── WDControl #control
+    │   ├── UIBarButtonItem+WDActionBlock.h
+    │   ├── UIBarButtonItem+WDActionBlock.m
+    │   ├── UIControl+WDActionBlock.h
+    │   ├── UIControl+WDActionBlock.m
+    │   ├── UIGestureRecognizer+WDActionBlock.h
+    │   ├── UIGestureRecognizer+WDActionBlock.m
+    │   ├── WDActionBlockWrapper.h
+    │   └── WDActionBlockWrapper.m
+    ├── WDFrameWork #基础
+    │   ├── NSDate+WDCalendar.h
+    │   ├── NSDate+WDCalendar.m
+    │   ├── NSString+Addition.h
+    │   ├── NSString+Addition.m
+    │   ├── Reachability.h
+    │   ├── Reachability.m
+    │   ├── UIDevice+Addition.h
+    │   ├── UIDevice+Addition.m
+    │   ├── UIImage+Addition.h
+    │   ├── UIImage+Addition.m
+    │   ├── WDCoreAnimationEffect.h
+    │   ├── WDCoreAnimationEffect.m
+    │   ├── WDCountButton.h
+    │   ├── WDCountButton.m
+    │   ├── WDCycleScrollView.h
+    │   ├── WDCycleScrollView.m
+    │   ├── WDFrameWork.h
+    │   ├── WDJsonKit.h
+    │   ├── WDJsonKit.m
+    │   ├── WDReachability.h
+    │   ├── WDReachability.m
+    │   ├── WDSandbox.h
+    │   ├── WDSandbox.m
+    │   ├── WDSystemInfo.h
+    │   ├── WDSystemInfo.m
+    │   ├── WDUIConfigDefine.h
+    │   ├── WDViewExt.h
+    │   └── WDViewExt.m
+    ├── WDNetWork #网络组件
+    │   ├── WDNetWork.h
+    │   └── WDNetWork.m
+    ├── WDUI     #UI组件
+    │   ├── CWStarRateView
+    │   ├── DOPDropDownMenu.h
+    │   ├── DOPDropDownMenu.m
+    │   ├── ImageLoader
+    │   ├── JKAlertDialog
+    │   ├── MPNotificationView
+    │   ├── PopoverView.h
+    │   ├── PopoverView.m
+    │   ├── QRadioButton
+    │   ├── UIView+Toast.h
+    │   └── UIView+Toast.m
+    └── WDWorkKit.h	 #头文件
 
 ```
 
