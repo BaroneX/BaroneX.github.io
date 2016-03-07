@@ -101,7 +101,7 @@ UIview及其子类都有一个setNeedsDisplay的方法,调用这个方法,会调
     [but addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 下面的就是重绘的按钮,有点大了,
 ```
- ![image](https://github.com/BaroneX/BaroneX.github.io/tree/master/Resource/20140806.png)
+ ![image](/assets/images/20140806.png)
 
 绘图是一件有意思的事情,你可以自己发挥想象力,绘出许多有意思的东西,最后推荐一款软件PaintCode,看名字大概就知道什么意思了,是个BUG啊.
 Enjoy yourself;
