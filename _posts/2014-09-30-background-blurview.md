@@ -2,8 +2,8 @@
 layout: post
 title: "支付宝后台模糊效果"
 description: "支付宝后台模糊效果"
-category: Tips
-tags: [学习]
+category: iOS
+tags: [Tips]
 ---
 
 
