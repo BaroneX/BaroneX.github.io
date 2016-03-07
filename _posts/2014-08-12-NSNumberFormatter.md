@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "CoreAnimation的基本用法"
-description: "CoreAnimation的基本用法"
+title: "NSNumberFormatter的基本用法"
+description: "NSNumberFormatter的基本用法"
 category: iOS
 tags: [学习]
 ---
 
 
 
-#CoreAnimation的基本用法
+#NSNumberFormatter的基本用法
 ```
 
   NSNumberFormatter *numberFormatter = [[NSNumberFormatteralloc] init];
