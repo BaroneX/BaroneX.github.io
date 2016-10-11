@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BlakeKing" />
+    <title>WorkKit库</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="BlakeKing" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>WorkKit库</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2015-11-12">2015-11-12</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#iOS" title="iOS">iOS</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#学习" title="学习">学习</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<pre><code>#  pod 'WDWorkKit',:git =&gt; 'https://github.com/BaroneX/WDWorkKit.git'
+#  pod 'AFNetworking'
+#  pod 'SDWebImage'
+#  pod 'Masonry'
+#  pod 'MBProgressHUD'
+#  pod 'MJRefresh'
+#  pod 'TTTAttributedLabel'
+#  pod 'LKDBHelper'
+#  pod 'SVProgressHUD'
+#  pod 'MJExtension'
+#  pod 'IQKeyboardManager'
+#  pod 'DateTools'
+</code></pre>
+
+<pre><code>WDWorkKit
+├── Assets #资源文件
+│   ├── b27_icon_star_gray@2x.png
+│   ├── b27_icon_star_yellow@2x.png
+│   ├── radio_checked.png
+│   └── radio_unchecked.png
+└── Classes
+    ├── WDControl #control
+    │   ├── UIBarButtonItem+WDActionBlock.h
+    │   ├── UIBarButtonItem+WDActionBlock.m
+    │   ├── UIControl+WDActionBlock.h
+    │   ├── UIControl+WDActionBlock.m
+    │   ├── UIGestureRecognizer+WDActionBlock.h
+    │   ├── UIGestureRecognizer+WDActionBlock.m
+    │   ├── WDActionBlockWrapper.h
+    │   └── WDActionBlockWrapper.m
+    ├── WDFrameWork #基础
+    │   ├── NSDate+WDCalendar.h
+    │   ├── NSDate+WDCalendar.m
+    │   ├── NSString+Addition.h
+    │   ├── NSString+Addition.m
+    │   ├── Reachability.h
+    │   ├── Reachability.m
+    │   ├── UIDevice+Addition.h
+    │   ├── UIDevice+Addition.m
+    │   ├── UIImage+Addition.h
+    │   ├── UIImage+Addition.m
+    │   ├── WDCoreAnimationEffect.h
+    │   ├── WDCoreAnimationEffect.m
+    │   ├── WDCountButton.h
+    │   ├── WDCountButton.m
+    │   ├── WDCycleScrollView.h
+    │   ├── WDCycleScrollView.m
+    │   ├── WDFrameWork.h
+    │   ├── WDJsonKit.h
+    │   ├── WDJsonKit.m
+    │   ├── WDReachability.h
+    │   ├── WDReachability.m
+    │   ├── WDSandbox.h
+    │   ├── WDSandbox.m
+    │   ├── WDSystemInfo.h
+    │   ├── WDSystemInfo.m
+    │   ├── WDUIConfigDefine.h
+    │   ├── WDViewExt.h
+    │   └── WDViewExt.m
+    ├── WDNetWork #网络组件
+    │   ├── WDNetWork.h
+    │   └── WDNetWork.m
+    ├── WDUI     #UI组件
+    │   ├── CWStarRateView
+    │   ├── DOPDropDownMenu.h
+    │   ├── DOPDropDownMenu.m
+    │   ├── ImageLoader
+    │   ├── JKAlertDialog
+    │   ├── MPNotificationView
+    │   ├── PopoverView.h
+    │   ├── PopoverView.m
+    │   ├── QRadioButton
+    │   ├── UIView+Toast.h
+    │   └── UIView+Toast.m
+    └── WDWorkKit.h    #头文件
+</code></pre>
+
+<pre><code>WDPayKit/ 
+├── WDPayConfig.h     //配置文件
+├── WDPayKit.h        //支付接口
+├── WDPayKit.mm   
+├── WDPayResult.h     //交易结果类
+├── WDPayResult.m
+│   
+├── ALPay             //支付宝
+│   ├── AlipaySDK.bundle
+│   ├── AlipaySDK.framework
+│   ├── WDALPayAdapter.h 
+│   └── WDALPayAdapter.m
+│   
+├── UPPAY              //银联
+│   ├── UPPayPlugin.h
+│   ├── UPPayPluginDelegate.h
+│   ├── WDUNPayAdapter.h
+│   ├── WDUNPayAdapter.m
+│   └── libUPPayPlugin.a
+│   
+└── WXPay             //微信
+    ├── WDWXPayAdapter.h
+    ├── WDWXPayAdapter.m
+    ├── WXApi.h
+    ├── WXApiObject.h
+    ├── libWeChatSDK.a
+    └── read_me.txt
+</code></pre>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/privateSpecs/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/xcode-mobileprovision/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/BaroneX/NET/new/gh-pages/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/BaroneX/NET/edit/gh-pages/_posts/2015-11-12-WDWorkKit.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/BaroneX/NET" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - 2016 <a href="/about/">BlakeKing</a>
+
+
+         </small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>

@@ -3,11 +3,1030 @@
   <channel>
     <title></title>
     <description></description>
-    <link>http://yonsm.net/</link>
-    <atom:link href="http://yonsm.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Aug 2015 15:20:42 +0800</pubDate>
-    <lastBuildDate>Tue, 18 Aug 2015 15:20:42 +0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://BaroneX.github.io/</link>
+    <atom:link href="http://BaroneX.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 21 Sep 2016 18:46:41 +0800</pubDate>
+    <lastBuildDate>Wed, 21 Sep 2016 18:46:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>[转]iOS-最全的App上架教程</title>
+        <description>&lt;p&gt;[转自]&lt;a href=&quot;http://www.jianshu.com/p/cea762105f7c#&quot;&gt;iOS-最全的App上架教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;准备&lt;/p&gt;
+
+&lt;p&gt;开发者账号
+完工的项目
+上架步骤&lt;/p&gt;
+
+&lt;p&gt;一、创建App ID&lt;/p&gt;
+
+&lt;p&gt;二、创建证书请求文件 （CSR文件）&lt;/p&gt;
+
+&lt;p&gt;三、创建发布证书 （CER）&lt;/p&gt;
+
+&lt;p&gt;四、创建Provisioning Profiles配置文件 （PP文件）&lt;/p&gt;
+
+&lt;p&gt;五、在App Store创建应用&lt;/p&gt;
+
+&lt;p&gt;六、打包上架&lt;/p&gt;
+
+&lt;p&gt;一、创建App ID&lt;/p&gt;
+
+&lt;p&gt;1.打开苹果开发者官网，点击“Account”登录会员中心。&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/2.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.填写信息创建app ID&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击+创建ID&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/6.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;二、创建证书请求文件（CSR文件）&lt;/p&gt;
+
+&lt;p&gt;CRS文件主要用于 绑定你的电脑的&lt;/p&gt;
+
+&lt;p&gt;1 点开LaunchPad，在其他中找到打开钥匙串访问&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2 点击电脑左上角的钥匙串访问–证书助理–从证书颁发机构请求证书&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3 出现如下界面，选择存储到磁盘，点击继续&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/9.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4 选择存储到桌面，存储&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/10.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5 点击完成&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/11.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6 在桌面上看到下面的文件，证书请求文件完成&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/12.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;三、创建发布证书 (CER文件)&lt;/p&gt;
+
+&lt;p&gt;1 找到Certificates ，点击All，然后点击右上角 + 号&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/13.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2 点击App Store and Ad Hoc&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/14.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;发布证书和开发者证书需要分别创建，操作两次，开发者证书用于真机调试，发布证书用于提交到AppStore。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击Continue&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/15.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击Continue&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/16.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击choose File.. 选择创建好的证书请求文件：CertificateSigningRequest.certSigningRequest 文件，点击Generate&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/17.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击Download下载创建好的发布证书（cer后缀的文件），然后点击Done，你创建的发布证书就会存储在帐号中。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/18.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;双击安装。如果安装不上，可以直接将证书文件拖拽到钥匙串访问的列表中&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;重点: 一般一个开发者帐号创建一个发布证书就够了，如果以后需要在其他电脑上上架App，只需要在钥匙串访问中创建p12文件，把p12文件安装到其他电脑上。这相当于给予了其他电脑发布App的权限。&lt;/p&gt;
+
+&lt;p&gt;四、创建Provisioning Profiles文件&lt;/p&gt;
+
+&lt;p&gt;1.找到Provisioning Profiles ，点击All，然后点击右上角 + 号&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/19.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.选择App Store，点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/20.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;该流程也需要进行两次，分别创建开发用的PP证书和发布的PP证书。&lt;/p&gt;
+
+&lt;p&gt;3.在App ID 这个选项栏里面找到你刚刚创建的：App IDs（Bundle ID） 类型的套装，点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/21.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4.选择你刚创建的发布证书（或者生成p12文件的那个发布证书），点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/22.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5.在Profile Name栏里输入一个名字（这个是PP文件的名字，可随便输入，在这里我用工程名字，便于分别），然后点击Generate&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/23.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;注意：wildCard格式的证书没有推送，PassCard等服务的应用，慎重选择。因为PP证书的开发者证书需要真机调试，所以我们需要绑定真机，这里因为之前添加过一些设备，所以这里就可以直接全选添加，如果没有的话，需要将真机的udid复制出来在此添加。在发布PP文件中，是没有这一步的。&lt;/p&gt;
+
+&lt;p&gt;6.Download生成的PP文件，然后点击Done&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/24.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;双击就添加到Xcode中，这样在真机调试或者发布时，就可以分别有不同的PP证书与其对应。其实可以不用下载保存&lt;/p&gt;
+
+&lt;p&gt;五、在App Store创建应用&lt;/p&gt;
+
+&lt;p&gt;1、回到Account，点击iTunes Connect&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/25.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、点击我的App&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/26.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、点击新建 iOSApp&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/27.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4、依次按提示填入对应信息，然后点击创建&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/28.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5、依次把不同尺寸的App截图拉入到对应的里面&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/29.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6、填入App简介&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/30.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;7、按提示依次输入&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;此时这个构建版本还没有生成，我们先把基本信息填写完毕，然后再进入Xcode中把项目打包发送到过来。注意：填写完一定要点击右上角的保存。&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/32.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不要忘记填写测试账号，否则会被拒的，而且一定要跟服务器同事说好，不要删除测试账号，否则同样被拒（联系号码 一定要+ 86 如：+86 13720329661）&lt;/p&gt;
+
+&lt;p&gt;六、打包上架&lt;/p&gt;
+
+&lt;p&gt;在Xcode中打包工程找到你刚刚下载的发布证书（后缀为.cer）或者p12文件，和PP文件，双击，看起来没反应，但是他们已经加入到你的钥匙串中。如果之前步骤已操作过，可省略此步。&lt;/p&gt;
+
+&lt;p&gt;1、打开Xcode，配置项目环境，点击+可以选择Add Apple ID；点击View Details可以查看该Apple Id下的Certificates和Provisioning Profile证书文件，在这里你可以点击下载。在项目Targets下的Identity中，Team选择对应的Apple ID 即可。&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/33.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;特别注意： 这里填写的Apple ID 不是你自己手机上创建的Apple ID 一定要是 开发者账号的 账号和密码 （~QAQ~ 我就在这里被坑过）&lt;/p&gt;
+
+&lt;p&gt;2、选择模拟器为iOS Device，按照下图提示操作&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/34.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、修改.plist文件，两个.plist文件都要修改&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/35.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4、Archive在线打包，在真机状态下选择Product——&gt;Archive，如果不是真机状态下，Archive会是灰色不可用的)。&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/36.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5、打包之后会生成一个 ipa文件 ，然后返回我的App~~在构建版本处，点击Application Loader 就会将其下载下来，然后通过该软件把ipa文件上传到 appstore上。&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/37.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/38.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/39.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/40.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;打包过程中 会出现的问题&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/41.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;解决方案：iOS- 打包时 UUID出错的解决方案&lt;/p&gt;
+
+&lt;p&gt;application Loader 上传出现的错误&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921/42.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6.发送成功后返回到我的App，刷新页面，在构建版本处就会有个 + 号，点击 + 号把发送过来的程序添加上去就行了&lt;/p&gt;
+
+&lt;p&gt;7.提交审核&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Sep 2016 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/app-upload-to-store/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/app-upload-to-store/</guid>
+        
+        <category>Tips</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>[转]iOS-最全的真机测试教程</title>
+        <description>&lt;p&gt;[转自]&lt;a href=&quot;http://www.jianshu.com/p/c8e86f62687a&quot;&gt;iOS-最全的真机测试教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;准备&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;开发者账号&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;自从Xcode7 出来之后，一般的真机测试不需要 开发者账号，也就不需要看这篇教程，只有app具有 “推送”等功能的时候，要真机测试就必须要开发者账号和设置证书。苹果只是让你体验一下它的基本功能，要深入还是要花钱的。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;待测试的项目&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3&gt;真机测试步骤&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一、创建App ID&lt;/li&gt;
+&lt;li&gt;二、创建证书请求文件 （CSR文件）&lt;/li&gt;
+&lt;li&gt;三、根据CSR创建开发者证书(CER)(开发、测试用的Develope证书）&lt;/li&gt;
+&lt;li&gt;四、添加设备（Devices）&lt;/li&gt;
+&lt;li&gt;五、根据Devices创建Provisioning Profiles配置文件 （PP文件）&lt;/li&gt;
+&lt;li&gt;六、设置Xcode 然后真机调试&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3&gt;重点&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用P12 文件 使多台Mac进行真机调试(或者发布) 【重点】&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3&gt;一、创建App ID&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.打开苹果开发者网，点击“Account”登录会员中心。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/2.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2.填写信息创建app ID&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; 点击+创建ID&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/6.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;第一个选项：明确的app id 与项目中的Bundle Identifier相对应
+如果你打算将应用程序中加入Game Center，或在应用中使用应 用内购买，进行数据保护，使用iCloud，或者想要给你的应用程序一个唯一的配置文件，你就必须申请Explicit App ID。&lt;/p&gt;
+
+&lt;p&gt;第二个选项：通用app id可以在所有不需要明确id的app中使用
+淘宝上卖的真机调试证书就是这个&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/9.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;二、创建证书请求文件（CSR文件)&lt;/h3&gt;
+
+&lt;p&gt;创建CSR文件请看《iOS-最全的App上架教程》的第二点这里就不多说了&lt;/p&gt;
+
+&lt;h3&gt;三、根据CSR创建开发者证书(CER)&lt;/h3&gt;
+
+&lt;h4&gt;1、 找到Certificates ，点击All，然后点击右上角 + 号&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/10.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;2 、 点击Developement中的iOS App Developement选项&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/11.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;3. 点击Continue&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/12.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;4. 点击Continue&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/13.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;5. 点击choose File.. 选择创建好的证书请求文件：CertificateSigningRequest.certSigningRequest 文件，点击Generate&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/14.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;6. 点击Download下载创建好的发布证书（cer后缀的文件），然后点击Done，你创建的发布证书就会存储在帐号中&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/15.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;7. 双击安装。如果安装不上，可以直接将证书文件拖拽到钥匙串访问的列表中&lt;/h4&gt;
+
+&lt;h3&gt;四、添加设备&lt;/h3&gt;
+
+&lt;h4&gt;1、点击+添加设备到开发者账号中，为制作PP文件做准备&lt;/h4&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/16.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/17.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Name：设备的描述 可以随便填 方便你记忆&lt;/p&gt;
+
+&lt;p&gt;UDID：设备的标号&lt;/p&gt;
+
+&lt;p&gt;2、获取UUID(这里随便提供一种方法获取UUID)
+将iPhone手机插入到电脑上 ，打开iTunes，然后按如图操作&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/18.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/19.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/20.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、填入UUID就OK了&lt;/p&gt;
+
+&lt;h3&gt;五、根据Devices创建Provisioning Profiles配置文件 （PP文件）&lt;/h3&gt;
+
+&lt;p&gt;1、找到Provisioning Profiles ，点击All，然后点击右上角 + 号&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/21.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、 选择iOS App Developement，点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/22.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、在App ID 这个选项栏里面找到你刚刚创建的：App IDs（Bundle ID） 类型的套装，点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/23.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4、选择你刚创建的发布证书（或者生成p12文件的那个发布证书），点击Continue&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/241.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5、选择设备&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/24.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;注意：wildCard格式的证书没有推送，PassCard等服务的应用，慎重选择。因为PP证书的开发者证书需要真机调试，所以我们需要绑定真机，这里因为之前添加过一些设备，所以这里就可以直接全选添加，如果没有的话，需要将真机的udid复制出来在此添加。在发布的PP文件中，是没有这一步的。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;6、在Profile Name栏里输入一个名字（这个是PP文件的名字，可随便输入，在这里我用工程名字，便于分别），然后点击Generate&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/25.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;7、然后点击下载 ，将其下载下来&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;双击就添加到Xcode中，这样在真机调试或者发布时，就可以分别有不同的PP证书与其对应。其实可以不用下载保存&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;六、设置Xcode 真机调试&lt;/h3&gt;
+
+&lt;p&gt;1、设置Bundle ID 和 申请的appid 一致&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/26.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、设置Debug的CER证书
+3、配置证书描述文件(PP文件)&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/27.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4、选择真机 进行真机调试&lt;/p&gt;
+
+&lt;p&gt;使用P12 文件 使多台Mac进行真机调试 (或者发布)【重点】
+1、为什么要使用P12文件&lt;/p&gt;
+
+&lt;p&gt;当我们用大于三个mac设备开发应用时，想要申请新的证书，如果在我们的证书里，包含了3个发布证书，2个开发证书，可以发现再也申请不了开发证书和发布证书了（一般在我们的证书界面中应该只有一个开发证书，一个发布证书，没必要生成那么多的证书，证书一般在过期之后才会重新添加。）&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/28.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这时候，再点击“+”时，就会发现点击不了开发和发布证书，也就是添加不了开发证书和发布证书了：&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/29.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、P12文件能解决什么问题
+为了不能添加证书的问题我们有2个解决方案&lt;/p&gt;
+
+&lt;p&gt;第一种方法——“revoke”（不推荐）：&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/30.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;将以前的证书“revoke”掉，
+然后重新生成一个新的证书。
+这种方法是可以的，但是会造成相应的ProvisioningProfiles(PP文件)失效，这是小问题。但是又要重新申请证书甚至描述文件很浪费时间，所以不提倡这种做法。&lt;/p&gt;
+
+&lt;p&gt;第二种方法——“.p12”（推荐）：&lt;/p&gt;
+
+&lt;p&gt;我们的每一个证书都可以生成一个.p12文件，这个文件是一个加密的文件，只要知道其密码，就可以供给所有的mac设备使用，使设备不需要在苹果开发者网站重新申请开发和发布证书，就能使用。
+3、P12文件是如何使用的&lt;/p&gt;
+
+&lt;p&gt;注意：一般.p12文件是给与别人使用的，本机必须已经有一个带秘钥的证书才可以生成.p12文件
+导出一个带有私钥的证书(这里我选择调试证书 也就是调试的CER证书 ，其实也可以是 发布证书，只不过那就不用于调试 而是用于上架了）。然后点击导出&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;填好名字和储存位置，点击储存&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/32.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;填写该P12文件证书的密码，点“好”&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/33.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后生成P12文件&lt;/p&gt;
+
+&lt;p&gt; &lt;img src=&quot;/assets/20160921-2/35.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其实P12文件不仅是真机测试的时候用，上架的时候也会用，P12文件的使用方法，调试和上架是一样的。最简单的理解就是：把P12文件当做CER文件使用，调试就当调试CER，上架就当发布CER使用。
+使用
+调试：就是把该教程的第三步创建调试证书省略，将其换成P12文件即可
+上架：把《iOS-最全的App上架教程》的第三步穿件发布证书省略，将其换成P12文件即可。&lt;/p&gt;
+
+&lt;p&gt;文／随梦而飞飞（简书作者）
+原文链接：http://www.jianshu.com/p/c8e86f62687a
+著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Sep 2016 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/app-device-debug/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/app-device-debug/</guid>
+        
+        <category>Tips</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>清除Xcode mobileprovision文件</title>
+        <description>&lt;p&gt;如何清除xcode里面的mobileprovision文件&lt;/p&gt;
+
+&lt;p&gt;通过终端进行删除 进入Profiles目录&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/Library/MobileDevice/Provisioning\ Profiles/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后删除里面所有的mobileprovision文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rm *.mobileprovision
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后打开&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Xcode-&amp;gt;preferences-&amp;gt;Accounts-&amp;gt;View Details...
+下载相应的Profiles
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/xcode-mobileprovision/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/xcode-mobileprovision/</guid>
+        
+        <category>Tips</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>WorkKit库</title>
+        <description>&lt;pre&gt;&lt;code&gt;#  pod 'WDWorkKit',:git =&amp;gt; 'https://github.com/BaroneX/WDWorkKit.git'
+#  pod 'AFNetworking'
+#  pod 'SDWebImage'
+#  pod 'Masonry'
+#  pod 'MBProgressHUD'
+#  pod 'MJRefresh'
+#  pod 'TTTAttributedLabel'
+#  pod 'LKDBHelper'
+#  pod 'SVProgressHUD'
+#  pod 'MJExtension'
+#  pod 'IQKeyboardManager'
+#  pod 'DateTools'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;WDWorkKit
+├── Assets #资源文件
+│   ├── b27_icon_star_gray@2x.png
+│   ├── b27_icon_star_yellow@2x.png
+│   ├── radio_checked.png
+│   └── radio_unchecked.png
+└── Classes
+    ├── WDControl #control
+    │   ├── UIBarButtonItem+WDActionBlock.h
+    │   ├── UIBarButtonItem+WDActionBlock.m
+    │   ├── UIControl+WDActionBlock.h
+    │   ├── UIControl+WDActionBlock.m
+    │   ├── UIGestureRecognizer+WDActionBlock.h
+    │   ├── UIGestureRecognizer+WDActionBlock.m
+    │   ├── WDActionBlockWrapper.h
+    │   └── WDActionBlockWrapper.m
+    ├── WDFrameWork #基础
+    │   ├── NSDate+WDCalendar.h
+    │   ├── NSDate+WDCalendar.m
+    │   ├── NSString+Addition.h
+    │   ├── NSString+Addition.m
+    │   ├── Reachability.h
+    │   ├── Reachability.m
+    │   ├── UIDevice+Addition.h
+    │   ├── UIDevice+Addition.m
+    │   ├── UIImage+Addition.h
+    │   ├── UIImage+Addition.m
+    │   ├── WDCoreAnimationEffect.h
+    │   ├── WDCoreAnimationEffect.m
+    │   ├── WDCountButton.h
+    │   ├── WDCountButton.m
+    │   ├── WDCycleScrollView.h
+    │   ├── WDCycleScrollView.m
+    │   ├── WDFrameWork.h
+    │   ├── WDJsonKit.h
+    │   ├── WDJsonKit.m
+    │   ├── WDReachability.h
+    │   ├── WDReachability.m
+    │   ├── WDSandbox.h
+    │   ├── WDSandbox.m
+    │   ├── WDSystemInfo.h
+    │   ├── WDSystemInfo.m
+    │   ├── WDUIConfigDefine.h
+    │   ├── WDViewExt.h
+    │   └── WDViewExt.m
+    ├── WDNetWork #网络组件
+    │   ├── WDNetWork.h
+    │   └── WDNetWork.m
+    ├── WDUI     #UI组件
+    │   ├── CWStarRateView
+    │   ├── DOPDropDownMenu.h
+    │   ├── DOPDropDownMenu.m
+    │   ├── ImageLoader
+    │   ├── JKAlertDialog
+    │   ├── MPNotificationView
+    │   ├── PopoverView.h
+    │   ├── PopoverView.m
+    │   ├── QRadioButton
+    │   ├── UIView+Toast.h
+    │   └── UIView+Toast.m
+    └── WDWorkKit.h    #头文件
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;WDPayKit/ 
+├── WDPayConfig.h     //配置文件
+├── WDPayKit.h        //支付接口
+├── WDPayKit.mm   
+├── WDPayResult.h     //交易结果类
+├── WDPayResult.m
+│   
+├── ALPay             //支付宝
+│   ├── AlipaySDK.bundle
+│   ├── AlipaySDK.framework
+│   ├── WDALPayAdapter.h 
+│   └── WDALPayAdapter.m
+│   
+├── UPPAY              //银联
+│   ├── UPPayPlugin.h
+│   ├── UPPayPluginDelegate.h
+│   ├── WDUNPayAdapter.h
+│   ├── WDUNPayAdapter.m
+│   └── libUPPayPlugin.a
+│   
+└── WXPay             //微信
+    ├── WDWXPayAdapter.h
+    ├── WDWXPayAdapter.m
+    ├── WXApi.h
+    ├── WXApiObject.h
+    ├── libWeChatSDK.a
+    └── read_me.txt
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 12 Nov 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/WDWorkKit/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/WDWorkKit/</guid>
+        
+        <category>学习</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>创建私有podspec库</title>
+        <description>&lt;h1&gt;创建私有podspec库&lt;/h1&gt;
+
+&lt;p&gt;1.远程Specs库添加到本地 .cocospod中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod repo add WDSpecs https://github.com/BaroneX/WDSpecs.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.创建工程(已有工程新建Spec文件)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib create WDWorkKit (pod spec create specName)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.修改工程 打开工程的spec文件,然后验证,根据提示修改代码和spec文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib lint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4.验证成功后代码push到远端,创建一个tag x.x.x(和podspec文件中描述的一致),push到github&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git tag '1.0.0'
+$ git push --tags
+$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5.在WDWorkKit.podspec目录下,执行命令,把podSpec推送到本地和远端私有pod仓库&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pod repo push WDSpecs WDWorkKit.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1&gt;更新维护&lt;/h1&gt;
+
+&lt;p&gt;1.更新代码,修改podspec文件&lt;/p&gt;
+
+&lt;p&gt;2.验证执行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib lint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.编辑完成之后，podupdate 验证无误后推送到远程,并打上新的tag,最后再次使用pod lib lint验证编辑好的podsepc文件，没有自身的WARNING或者ERROR之后，就可以再次提交到Spec Repo中了，命令跟之前是一样的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod repo push WTSpecs PodTestLibrary.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1&gt;使用&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;source 'https://github.com/BaroneX/WDSpecs.git' #添加私有pod仓库地址
+source'https://github.com/CocoaPods/Specs.git' #cocoaPods地址
+platform :ios, '7.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'testPod' do
+    pod 'WDWorkKit'
+    或
+    pod 'WDWorkKit',:git =&amp;gt; 'https://github.com/BaroneX/WDWorkKit.git'
+end
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 10 Oct 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/privateSpecs/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/privateSpecs/</guid>
+        
+        <category>学习</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>Runtime消息转发机制</title>
+        <description>&lt;h1&gt;运行时消息转发机制&lt;/h1&gt;
+
+&lt;p&gt;当你对一个对象发送消息,但是它无法响应次消息时,运行时会给你三次机会来试图挽救该消息.挽救失败--&gt;就会爆出 'unrecognized selector sent to instance:XXXXX'这个常见的错误.&lt;/p&gt;
+
+&lt;h3&gt;第一次机会:运行时会给一次机会,让你提供方法来实现该消息,返回YES会继续进行提供的方法,返回NO就会进入第二次机会&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;+ (BOOL)resolveInstanceMethod:(SEL)sel{
+return NO;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;第二次机会:如果当前对象实现不了该方法,会让你提供一个可以实现该方法的对象,如果提供不了,那就进入最后一次机会&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+return nil;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;第三次机会:该方法提供了两个方式供你选择,1你可以换个对象执行当前方法,2换个方法执行&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;-(void)forwardInvocation:(NSInvocation *)invocation{
+
+    //1换个对象执行
+    [invocation invokeWithTarget:[ClassB new]];
+
+    //2换个方法执行
+    invocation.selector = @selector(methodB);
+    [invocation invokeWithTarget:self];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上是运行时消息转发机制.写的比较简单.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/Runtime-messageSend/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/Runtime-messageSend/</guid>
+        
+        <category>学习</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>github第一篇博客</title>
+        <description>&lt;h1&gt;github第一篇博客&lt;/h1&gt;
+
+&lt;p&gt;转到github的第一篇博客,原来一直是在CSDN上整理博客,CSDN用了一段时间感觉一般,自从看了大神们把博客放到github上,感觉不错,就学着用jekyll自己也整了一个,感谢大神们博客的帮助,附上帮助连接!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.devtalking.com/articles/git-gitHub-markdown-jekyll/&quot;&gt;宇轩的Perfect Personal Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/webfrogs/webfrogs.github.com&quot;&gt;webfrogs的博客模板&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 18 Aug 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/myfirstblog/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/myfirstblog/</guid>
+        
+        <category>学习</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>本地通知</title>
+        <description>&lt;h1&gt;本地通知&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&quot;`&quot;&gt; //
+//  AppDelegate.m
+//  Map
+//
+//  Created by Blake on 15/3/2.
+//  Copyright (c) 2015年 Blake. All rights reserved.
+//
+
+#import &quot;AppDelegate.h&quot;
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+
+
+    //ios8以上必须要申请通知,ios8以下不需要申请直接可以添加通知
+    //ios8以上关闭通知中心,不会接到本地通知,
+    //ios8以下本地通知关闭不了.
+
+    if ([[[UIDevice currentDevice]systemVersion]floatValue]&amp;lt;8.0) {
+        //小于8直接添加本地通知
+        [self addLocalNotification];
+
+    }else{
+        //8以上需要授权
+        //如果已经获得发送通知的授权则创建本地通知，否则请求授权(注意：如果不请求授权在设置中是没有对应的通知设置项的，也就是说如果从来没有发送过请求，即使通过设置也打不开消息允许设置)
+    if ([[UIApplication sharedApplication]currentUserNotificationSettings].types!=UIUserNotificationTypeNone) {
+        [self addLocalNotification];
+    }else{
+        //申请本地通知的授权
+        [[UIApplication sharedApplication]registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound  categories:nil]];
+    }
+    }
+
+
+
+    return YES;
+}
+#pragma mark 调用过用户注册通知方法之后执行（也就是调用完registerUserNotificationSettings:方法之后执行）
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    if (notificationSettings.types!=UIUserNotificationTypeNone) {
+        [self addLocalNotification];
+    }
+}
+
+#pragma mark 进入前台后设置消息信息
+-(void)applicationWillEnterForeground:(UIApplication *)application{
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];//进入前台取消应用消息图标
+}
+
+#pragma mark 添加本地通知
+-(void)addLocalNotification{
+
+    //定义本地通知对象
+    UILocalNotification *notification=[[UILocalNotification alloc]init];
+    //设置调用时间
+    notification.fireDate=[NSDate dateWithTimeIntervalSinceNow:3.0];//通知触发的时间，10s以后
+    notification.repeatInterval=2;//通知重复次数
+    notification.timeZone = [NSTimeZone localTimeZone];
+    notification.repeatCalendar=[NSCalendar currentCalendar];//当前日历，使用前最好设置时区等信息以便能够自动同步时间
+    //NSCalendarUnitDay设置每天重复
+
+    //设置通知属性
+    notification.alertBody=@&quot;通知内容&quot;;
+    notification.applicationIconBadgeNumber=1;//图标右上角数字
+    notification.alertAction=@&quot;打开应用&quot;; //锁屏界面的滑动动作提示
+//    notification.alertLaunchImage=@&quot;1&quot;;//通过点击通知打开应用时的启动图片,这里使用程序启动图片
+    notification.soundName=UILocalNotificationDefaultSoundName;//收到通知时播放的声音，默认消息声音
+//    notification.soundName=@&quot;msg.caf&quot;;//通知声音（需要真机才能听到声音）
+
+    //设置用户信息
+    notification.userInfo=@{@&quot;keyId&quot;:@1,@&quot;KeyName&quot;:@&quot;x&quot;};//绑定到通知上的其他附加信息
+
+    //调用通知
+//    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
+}
+
+//本地通知调用后在前端或者是进入前端时调用
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    //打开应用时调用
+    NSLog(@&quot;%@,%@,%@&quot;,notification.userInfo,notification.alertBody,notification.alertAction);
+
+}
+#pragma mark 移除本地通知，在不需要此通知时记得移除
+-(void)removeNotification{
+
+    NSArray* notiArray = [[UIApplication sharedApplication]scheduledLocalNotifications];
+
+    if (notiArray) {
+
+        for (UILocalNotification* local in notiArray) {
+            //根据定义的字典信息找到对应的通知取消
+            NSLog(@&quot;%@,%@,%@&quot;,local.userInfo,local.alertBody,local.alertAction);
+
+            [[UIApplication sharedApplication]cancelLocalNotification:local];
+        }
+    }
+
+    //删除所有通知
+//    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+}
+@end
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Mon, 02 Mar 2015 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/localnotification/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/localnotification/</guid>
+        
+        <category>学习</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>Touch ID</title>
+        <description>&lt;h1&gt;Touch ID&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;//
+//  ViewController.m
+//  touchID_Demo_oc
+//
+//  Created by Blake on 14/12/8.
+//  Copyright (c) 2014年 Blake. All rights reserved.
+//
+
+#import &quot;ViewController.h&quot;
+#import &amp;lt;LocalAuthentication/LocalAuthentication.h&amp;gt;
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)clicked:(UIButton *)sender {
+
+    LAContext* lacontext = [LAContext new];
+    NSError* error = nil;
+
+    if ([lacontext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;amp;error]) {
+        [lacontext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@&quot;APP需要验证您的指纹信息&quot; reply:^(BOOL success, NSError *error) {
+
+            if (success) {
+
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@&quot;提示&quot; message:@&quot;验证成功&quot; preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@&quot;确定&quot; style:UIAlertActionStyleCancel handler:nil]];
+
+                [self presentViewController:alert animated:YES completion:nil];
+
+            }else{
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@&quot;提示&quot; message:@&quot;验证失败&quot; preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@&quot;确定&quot; style:UIAlertActionStyleCancel handler:nil]];
+                  [self presentViewController:alert animated:YES completion:nil];
+            }
+
+        }];
+
+    }else{
+
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@&quot;提示&quot; message:@&quot;设备无法验证,请输入密码&quot; preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@&quot;确定&quot; style:UIAlertActionStyleCancel handler:nil]];
+          [self presentViewController:alert animated:YES completion:nil];
+
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;随着新款iPhone,iPad等电子设备上市,越来越多的设备开始支持touchID,touchID的用法很简单,做一个简单地例子贴出来,&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Dec 2014 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/touchid/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/touchid/</guid>
+        
+        <category>Tips</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>支付宝后台模糊效果</title>
+        <description>&lt;h1&gt;支付宝后台模糊效果&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    //进入后台添加模糊视图
+    blurView = [WDBlurView getBlurView];
+    [self.window addSubview:blurView];
+
+}
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+
+    completionHandler(UIBackgroundFetchResultNewData);
+
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    //进入前端删除视图
+    [blurView removeFromSuperview];
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 30 Sep 2014 00:00:00 +0800</pubDate>
+        <link>http://BaroneX.github.io/background-blurview/</link>
+        <guid isPermaLink="true">http://BaroneX.github.io/background-blurview/</guid>
+        
+        <category>Tips</category>
+        
+        
+        <category>iOS</category>
+        
+      </item>
     
   </channel>
 </rss>

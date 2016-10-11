@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BlakeKing" />
+    <title>创建私有podspec库</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="BlakeKing" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>创建私有podspec库</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2015-10-10">2015-10-10</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#iOS" title="iOS">iOS</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#学习" title="学习">学习</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h1>创建私有podspec库</h1>
+
+<p>1.远程Specs库添加到本地 .cocospod中</p>
+
+<pre><code>pod repo add WDSpecs https://github.com/BaroneX/WDSpecs.git
+</code></pre>
+
+<p>2.创建工程(已有工程新建Spec文件)</p>
+
+<pre><code>pod lib create WDWorkKit (pod spec create specName)
+</code></pre>
+
+<p>3.修改工程 打开工程的spec文件,然后验证,根据提示修改代码和spec文件</p>
+
+<pre><code>pod lib lint
+</code></pre>
+
+<p>4.验证成功后代码push到远端,创建一个tag x.x.x(和podspec文件中描述的一致),push到github</p>
+
+<pre><code>$ git tag '1.0.0'
+$ git push --tags
+$ git push origin master
+</code></pre>
+
+<p>5.在WDWorkKit.podspec目录下,执行命令,把podSpec推送到本地和远端私有pod仓库</p>
+
+<pre><code> pod repo push WDSpecs WDWorkKit.podspec
+</code></pre>
+
+<h1>更新维护</h1>
+
+<p>1.更新代码,修改podspec文件</p>
+
+<p>2.验证执行</p>
+
+<pre><code>pod lib lint
+</code></pre>
+
+<p>3.编辑完成之后，podupdate 验证无误后推送到远程,并打上新的tag,最后再次使用pod lib lint验证编辑好的podsepc文件，没有自身的WARNING或者ERROR之后，就可以再次提交到Spec Repo中了，命令跟之前是一样的</p>
+
+<pre><code>pod repo push WTSpecs PodTestLibrary.podspec
+</code></pre>
+
+<h1>使用</h1>
+
+<pre><code>source 'https://github.com/BaroneX/WDSpecs.git' #添加私有pod仓库地址
+source'https://github.com/CocoaPods/Specs.git' #cocoaPods地址
+platform :ios, '7.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'testPod' do
+    pod 'WDWorkKit'
+    或
+    pod 'WDWorkKit',:git =&gt; 'https://github.com/BaroneX/WDWorkKit.git'
+end
+</code></pre>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/Runtime-messageSend/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/WDWorkKit/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/BaroneX/NET/new/gh-pages/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/BaroneX/NET/edit/gh-pages/_posts/2015-10-10-privateSpecs.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/BaroneX/NET" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - 2016 <a href="/about/">BlakeKing</a>
+
+
+         </small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>

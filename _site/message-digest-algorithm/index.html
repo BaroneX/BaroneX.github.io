@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BlakeKing" />
+    <title>BASE64,MD5,SHA1</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="BlakeKing" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>BASE64,MD5,SHA1</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2014-03-04">2014-03-04</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#iOS" title="iOS">iOS</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#学习" title="学习">学习</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h1>BASE64,MD5,SHA1</h1>
+
+<p>BASE64是一种常用的编码格式,严格来说不算是一种加密算法.常见于邮件、http加密.
+iOS7.0后官方提供了编码解码的api GTMBase64也是经常用的编码解码的第三方库</p>
+
+<pre><code>@interface NSData (NSDataBase64Encoding)
+
+/* Create an NSData from a Base-64 encoded NSString using the given options. By default, returns nil when the input is not recognized as valid Base-64.
+*/
+- (instancetype)initWithBase64EncodedString:(NSString *)base64String options:(NSDataBase64DecodingOptions)options NS_AVAILABLE(10_9, 7_0);
+
+/* Create a Base-64 encoded NSString from the receiver's contents using the given options.
+*/
+- (NSString *)base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)options NS_AVAILABLE(10_9, 7_0);
+
+/* Create an NSData from a Base-64, UTF-8 encoded NSData. By default, returns nil when the input is not recognized as valid Base-64.
+*/
+- (instancetype)initWithBase64EncodedData:(NSData *)base64Data options:(NSDataBase64DecodingOptions)options NS_AVAILABLE(10_9, 7_0);
+
+/* Create a Base-64, UTF-8 encoded NSData from the receiver's contents using the given options.
+*/
+- (NSData *)base64EncodedDataWithOptions:(NSDataBase64EncodingOptions)options NS_AVAILABLE(10_9, 7_0);
+
+@end
+</code></pre>
+
+<p>MD5(信息摘要算法)是一种单向的,不可逆的Hash算法,一般用来做文件的校验,同一文件,生成的MD5值是唯一的,用两次取到的MD5来判断文件是否相同,</p>
+
+<pre><code>#import 
+- (NSString *)stringMD5
+{
+    if(self == nil || [self length] == 0)
+    {
+        return nil;
+    }
+
+    const char *value = [self UTF8String];
+
+    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(value, (CC_LONG)strlen(value), outputBuffer);
+
+    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for(NSInteger count = 0; count &lt; CC_MD5_DIGEST_LENGTH; count++){
+        [outputString appendFormat:@"%02x",outputBuffer[count]];
+    }
+
+    return outputString;
+}
+</code></pre>
+
+<p>SHA(安全散列算法)也是单向,不可逆的哈希算法,数字签名等密码学应用中重要的工具，被广泛地应用于电子商务等信息安全领域。和MD5差不多,但要比MD5安全一些,</p>
+
+<pre><code>+(NSString *)digest:(NSString *)input{
+    NSData *data = [input dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    for (int i = 0; i &lt; CC_SHA1_DIGEST_LENGTH; i++) {
+        [output appendFormat:@"%02x",digest[i]];
+    }
+    return output;
+}
+</code></pre>
+
+<p>研究的很浅,见谅!</p>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a   class="pageNavInvalid"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/thread/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/BaroneX/NET/new/gh-pages/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/BaroneX/NET/edit/gh-pages/_posts/2014-03-04-message-digest-algorithm.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/BaroneX/NET" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - 2016 <a href="/about/">BlakeKing</a>
+
+
+         </small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>

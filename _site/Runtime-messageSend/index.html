@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BlakeKing" />
+    <title>Runtime消息转发机制</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="BlakeKing" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>Runtime消息转发机制</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2015-09-08">2015-09-08</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#iOS" title="iOS">iOS</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#学习" title="学习">学习</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h1>运行时消息转发机制</h1>
+
+<p>当你对一个对象发送消息,但是它无法响应次消息时,运行时会给你三次机会来试图挽救该消息.挽救失败-->就会爆出 'unrecognized selector sent to instance:XXXXX'这个常见的错误.</p>
+
+<h3>第一次机会:运行时会给一次机会,让你提供方法来实现该消息,返回YES会继续进行提供的方法,返回NO就会进入第二次机会</h3>
+
+<pre><code>+ (BOOL)resolveInstanceMethod:(SEL)sel{
+return NO;
+}
+</code></pre>
+
+<h3>第二次机会:如果当前对象实现不了该方法,会让你提供一个可以实现该方法的对象,如果提供不了,那就进入最后一次机会</h3>
+
+<pre><code>- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+return nil;
+}
+</code></pre>
+
+<h3>第三次机会:该方法提供了两个方式供你选择,1你可以换个对象执行当前方法,2换个方法执行</h3>
+
+<pre><code>-(void)forwardInvocation:(NSInvocation *)invocation{
+
+    //1换个对象执行
+    [invocation invokeWithTarget:[ClassB new]];
+
+    //2换个方法执行
+    invocation.selector = @selector(methodB);
+    [invocation invokeWithTarget:self];
+}
+</code></pre>
+
+<p>以上是运行时消息转发机制.写的比较简单.</p>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/myfirstblog/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/privateSpecs/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/BaroneX/NET/new/gh-pages/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/BaroneX/NET/edit/gh-pages/_posts/2015-09-08-Runtime messageSend.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/BaroneX/NET" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - 2016 <a href="/about/">BlakeKing</a>
+
+
+         </small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>

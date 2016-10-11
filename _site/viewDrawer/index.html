@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="BlakeKing" />
+    <title>iOS UIView及其子类的重绘</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="BlakeKing" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>iOS UIView及其子类的重绘</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2014-08-06">2014-08-06</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#iOS" title="iOS">iOS</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#学习" title="学习">学习</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h1>iOS UIView及其子类的重绘</h1>
+
+<p>开发自定义的UIView及其子类,有时候会比较多的用到drawRect方法,这个方法是一个重写
+类型的方法,不重写的话,默认是执行父类的drawRect方法,和重绘有关的API都是CoreGraphics库里的API,刚开始使用时候,感觉和传统的objective-c风格的API有较大差异,但是熟悉之后就会好很多,很多方法 根据意思就能看明白,这是比较方便的.</p>
+
+<pre><code>绘图的关键步骤,
+1.获取视图的上下文信息,就是获取一块画画的画布,
+2.使用CoreGraphics风格的API或者objective-c风格的API进行绘制
+</code></pre>
+
+<pre><code>//获取画布
+CGContextRef ctx =UIGraphicsGetCurrentContext();
+{
+// 开始定义路径
+CGContextBeginPath(ctx);
+// 添加一段圆弧，最后一个参数1代表逆时针，0代表顺时针
+CGContextAddArc(&lt;#CGContextRef c#&gt;画布, &lt;#CGFloat x#&gt;原点x坐标, &lt;#CGFloat y#&gt;原点y坐标, &lt;#CGFloat radius#&gt;半径, &lt;#CGFloat startAngle#&gt;开始的弧度, &lt;#CGFloat endAngle#&gt;结束的弧度, &lt;#int clockwise#&gt;)
+//关闭路径
+CGContextClosePath(ctx);
+// 设置填充颜色
+CGContextSetRGBFillColor(&lt;#CGContextRef context#&gt;画布, &lt;#CGFloat red#&gt;, &lt;#CGFloat green#&gt;, &lt;#CGFloat blue#&gt;, &lt;#CGFloat alpha#&gt;)
+// 填充当前路径。
+CGContextFillPath(ctx);
+// 关闭路径
+CGContextClosePath(ctx);
+//保存状态
+}
+CGContextSaveGState(ctx);
+</code></pre>
+
+<pre><code>大括号之间的代码可以换成OC风格的代码
+{
+//// Color Declarations
+UIColor* fillColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+UIColor* strokeColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+
+//// Oval Drawing
+UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(81.5, 30.5, 49, 47)];
+[fillColor setFill];
+[ovalPath fill];
+[strokeColor setStroke];
+ovalPath.lineWidth = 1;
+[ovalPath stroke];
+}
+两种代码都差不多,个人比较喜欢OC风格的
+</code></pre>
+
+<p>UIview及其子类都有一个setNeedsDisplay的方法,调用这个方法,会调用drawRect方法再次重绘</p>
+
+<p>例子:</p>
+
+<pre><code>#import "CustomButton.h"
+
+@implementation CustomButton
+
+-(void)drawRect:(CGRect)rect{
+
+
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+
+    for (int i = 0; i&lt;10; i++) {
+        UIBezierPath* path = [UIBezierPath bezierPath];
+        NSLog(@"%f",(self.frame.origin.y+self.frame.size.width/2));
+        [path addArcWithCenter:CGPointMake(self.frame.size.width/2,self.frame.size.height/2) radius:(self.frame.size.width-i*40) startAngle:0 endAngle:M_PI*2 clockwise:0];
+        UIColor* fillColor;
+        if (i%2) {
+
+            fillColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+        }else{
+
+            fillColor = [UIColor colorWithRed: 1 green: 0 blue: 0 alpha: 1];
+        }
+        [fillColor setFill];
+        [path fill];
+    }
+
+
+    CGContextSaveGState(ctx);
+}
+@end
+</code></pre>
+
+<pre><code>在主界面添加自定义的按钮
+    CustomButton* but = [[CustomButton alloc]initWithFrame:CGRectMake(0,100 , 320, 320)];
+
+    [self.view addSubview:but];
+    [but addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+下面的就是重绘的按钮,有点大了,
+</code></pre>
+
+<p> <img src="/assets/images/20140806.png" alt="image" /></p>
+
+<p>绘图是一件有意思的事情,你可以自己发挥想象力,绘出许多有意思的东西,最后推荐一款软件PaintCode,看名字大概就知道什么意思了,是个BUG啊.
+Enjoy yourself;</p>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/coreanimation/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/NSNumberFormatter/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/BaroneX/NET/new/gh-pages/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/BaroneX/NET/edit/gh-pages/_posts/2014-08-06-viewDrawer.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/BaroneX/NET" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - 2016 <a href="/about/">BlakeKing</a>
+
+
+         </small></p>
+    </footer>
+
+    </div>
+  </body>
+</html>
