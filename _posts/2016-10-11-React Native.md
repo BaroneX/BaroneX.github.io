@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[转]iOS-最全的App上架教程"
-description: "iOS-App上架"
-category: iOS
+title: "React Native"
+description: "React Native"
+category: ReactNative
 tags: [Tips]
 ---
 
